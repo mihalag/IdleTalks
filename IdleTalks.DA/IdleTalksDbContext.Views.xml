@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<views MappingHash="aa4052888e699b5b1ddb1feed836dd9796bde3851d556cfc46c1e76816dc05e0">
+  <view extent="CodeFirstDatabase.ConversationReply"><![CDATA[
+    SELECT VALUE -- Constructing ConversationReply
+        [CodeFirstDatabaseSchema.ConversationReply](T1.ConversationReply_Id, T1.ConversationReply_ConversationId, T1.ConversationReply_UserId, T1.ConversationReply_Message)
+    FROM (
+        SELECT 
+            T.Id AS ConversationReply_Id, 
+            T.ConversationId AS ConversationReply_ConversationId, 
+            T.UserId AS ConversationReply_UserId, 
+            T.Message AS ConversationReply_Message, 
+            True AS _from0
+        FROM IdleTalksDbContext.ConversationReplies AS T
+    ) AS T1]]></view>
+  <view extent="CodeFirstDatabase.Conversation"><![CDATA[
+    SELECT VALUE -- Constructing Conversation
+        [CodeFirstDatabaseSchema.Conversation](T1.Conversation_Id, T1.Conversation_UserOneId, T1.Conversation_UserTwoId)
+    FROM (
+        SELECT 
+            T.Id AS Conversation_Id, 
+            T.UserOneId AS Conversation_UserOneId, 
+            T.UserTwoId AS Conversation_UserTwoId, 
+            True AS _from0
+        FROM IdleTalksDbContext.Conversations AS T
+    ) AS T1]]></view>
+  <view extent="CodeFirstDatabase.User"><![CDATA[
+    SELECT VALUE -- Constructing User
+        [CodeFirstDatabaseSchema.User](T1.User_Id, T1.User_FirstName, T1.User_LastName, T1.User_BirthDay, T1.User_Password, T1.User_MoodId)
+    FROM (
+        SELECT 
+            T.Id AS User_Id, 
+            T.FirstName AS User_FirstName, 
+            T.LastName AS User_LastName, 
+            T.BirthDay AS User_BirthDay, 
+            T.Password AS User_Password, 
+            T.MoodId AS User_MoodId, 
+            True AS _from0
+        FROM IdleTalksDbContext.Users AS T
+    ) AS T1]]></view>
+  <view extent="CodeFirstDatabase.Mood"><![CDATA[
+    SELECT VALUE -- Constructing Mood
+        [CodeFirstDatabaseSchema.Mood](T1.Mood_Id, T1.Mood_UserId, T1.Mood_Text)
+    FROM (
+        SELECT 
+            T.Id AS Mood_Id, 
+            T.UserId AS Mood_UserId, 
+            T.Text AS Mood_Text, 
+            True AS _from0
+        FROM IdleTalksDbContext.Moods AS T
+    ) AS T1]]></view>
+  <view extent="CodeFirstDatabase.Note"><![CDATA[
+    SELECT VALUE -- Constructing Note
+        [CodeFirstDatabaseSchema.Note](T1.Note_Id, T1.Note_UserId, T1.Note_Title, T1.Note_Text)
+    FROM (
+        SELECT 
+            T.Id AS Note_Id, 
+            T.UserId AS Note_UserId, 
+            T.Title AS Note_Title, 
+            T.Text AS Note_Text, 
+            True AS _from0
+        FROM IdleTalksDbContext.Notes AS T
+    ) AS T1]]></view>
+  <view extent="IdleTalksDbContext.ConversationReplies"><![CDATA[
+    SELECT VALUE -- Constructing ConversationReplies
+        [IdleTalks.DA.ConversationReply](T1.ConversationReply_Id, T1.ConversationReply_ConversationId, T1.ConversationReply_UserId, T1.ConversationReply_Message)
+    FROM (
+        SELECT 
+            T.Id AS ConversationReply_Id, 
+            T.ConversationId AS ConversationReply_ConversationId, 
+            T.UserId AS ConversationReply_UserId, 
+            T.Message AS ConversationReply_Message, 
+            True AS _from0
+        FROM CodeFirstDatabase.ConversationReply AS T
+    ) AS T1]]></view>
+  <view extent="IdleTalksDbContext.Conversations"><![CDATA[
+    SELECT VALUE -- Constructing Conversations
+        [IdleTalks.DA.Conversation](T1.Conversation_Id, T1.Conversation_UserOneId, T1.Conversation_UserTwoId)
+    FROM (
+        SELECT 
+            T.Id AS Conversation_Id, 
+            T.UserOneId AS Conversation_UserOneId, 
+            T.UserTwoId AS Conversation_UserTwoId, 
+            True AS _from0
+        FROM CodeFirstDatabase.Conversation AS T
+    ) AS T1]]></view>
+  <view extent="IdleTalksDbContext.Users"><![CDATA[
+    SELECT VALUE -- Constructing Users
+        [IdleTalks.DA.User](T1.User_Id, T1.User_FirstName, T1.User_LastName, T1.User_BirthDay, T1.User_Password, T1.User_MoodId)
+    FROM (
+        SELECT 
+            T.Id AS User_Id, 
+            T.FirstName AS User_FirstName, 
+            T.LastName AS User_LastName, 
+            T.BirthDay AS User_BirthDay, 
+            T.Password AS User_Password, 
+            T.MoodId AS User_MoodId, 
+            True AS _from0
+        FROM CodeFirstDatabase.User AS T
+    ) AS T1]]></view>
+  <view extent="IdleTalksDbContext.Moods"><![CDATA[
+    SELECT VALUE -- Constructing Moods
+        [IdleTalks.DA.Mood](T1.Mood_Id, T1.Mood_UserId, T1.Mood_Text)
+    FROM (
+        SELECT 
+            T.Id AS Mood_Id, 
+            T.UserId AS Mood_UserId, 
+            T.Text AS Mood_Text, 
+            True AS _from0
+        FROM CodeFirstDatabase.Mood AS T
+    ) AS T1]]></view>
+  <view extent="IdleTalksDbContext.Notes"><![CDATA[
+    SELECT VALUE -- Constructing Notes
+        [IdleTalks.DA.Note](T1.Note_Id, T1.Note_UserId, T1.Note_Title, T1.Note_Text)
+    FROM (
+        SELECT 
+            T.Id AS Note_Id, 
+            T.UserId AS Note_UserId, 
+            T.Title AS Note_Title, 
+            T.Text AS Note_Text, 
+            True AS _from0
+        FROM CodeFirstDatabase.Note AS T
+    ) AS T1]]></view>
+</views>
