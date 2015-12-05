@@ -39,6 +39,15 @@ namespace IdleTalks.DA.Repository
             }
         }
 
+        public bool CheckPassword(long userId, string password)
+        {
+            using (var db = DbContextFactory.Create())
+            {
+                var userPassword = db.Users.AsNoTracking().Where(x=>x.Id ==userId).Select(x=>x.Password).FirstOrDefault();
+                return userPassword == password;
+            }
+        }
+
         public IdleTalks.Repository.DTO.User GetUser(long id)
         {
             using (var db = DbContextFactory.Create())

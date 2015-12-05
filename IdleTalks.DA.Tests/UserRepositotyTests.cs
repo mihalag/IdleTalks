@@ -50,6 +50,20 @@ namespace IdleTalks.DA.Tests
             Assert.That(newPassword, Is.EqualTo(newPass));
         }
 
+        [Test, Rollback]
+        public void CheckPassword_ByDefault_Works()
+        {
+            var container = GetContainer();
+
+            var rep = container.Resolve<IUserRepository>();
+
+            var userId = 40010;
+            var password = "123";
+            var result = rep.CheckPassword(userId, password);
+
+            Assert.That(result, Is.EqualTo(true));
+        }
+
 
     }
 }
