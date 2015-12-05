@@ -7,5 +7,7 @@ namespace IdleTalks.Repository
         long AddUser(User user);
 
         User GetUser(long id);
+
+        void ChangePassword(long userId, string newPassword);
     }
 }

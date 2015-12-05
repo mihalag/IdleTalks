@@ -1,40 +1,55 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.Linq;
 using Autofac;
 using IdleTalks.AutofacConfig;
 using IdleTalks.Repository;
 using NUnit.Framework;
-using NUnit.Framework.Compatibility;
 
 namespace IdleTalks.DA.Tests
 {
     [TestFixture]
     public class UserRepositotyTests
     {
-        private IContainer ContainerBuild()
+        private IContainer GetContainer()
         {
             var builder = new ContainerBuilder();
             builder.RegisterModule(new RepositoryModule {LogToConsole = true});
             return builder.Build();
         }
 
-        [Test]
+        [Test, Rollback]
         public void AddUser_ByDefault_ReturnsId()
         {
-            var container = ContainerBuild();
+            var container = GetContainer();
             
-
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
             var rep = container.Resolve<IUserRepository>();
 
+            var user = new IdleTalks.Repository.DTO.User {FirstName = "qwe", LastName = "qwe", Password = "123"};
+            var id = rep.AddUser(user);
 
-            rep.AddUser(new IdleTalks.Repository.DTO.User() {FirstName = "qwe", LastName = "qwe", Password = "123"});
-            stopwatch.Stop();
-            var first = stopwatch.ElapsedMilliseconds;
-            stopwatch.Reset();
+            var createdUser = new IdleTalksDbContext().Database.SqlQuery<IdleTalks.Repository.DTO.User>("SELECT * FROM [User] WHERE Id = @id", new SqlParameter("@Id", id)).FirstOrDefault();
 
-            throw new Exception(first + ", 11second*10=" +stopwatch.ElapsedMilliseconds);
-            //Assert.That(id, Is.Not.Negative);
+            Assert.That(createdUser, Is.Not.Null);
+            Assert.That(createdUser.FirstName, Is.EqualTo(user.FirstName));
         }
+
+        [Test, Rollback]
+        public void ChangePassword_ByDefault_Works()
+        {
+            var container = GetContainer();
+
+            var rep = container.Resolve<IUserRepository>();
+
+            var userId = 40010;
+            var newPass = "4567";
+            rep.ChangePassword(userId, newPass);
+
+            var newPassword = new IdleTalksDbContext().Database.SqlQuery<string>("SELECT Password FROM [User] WHERE Id = @id", new SqlParameter("@Id", userId)).FirstOrDefault();
+
+            Assert.That(newPassword, Is.EqualTo(newPass));
+        }
+
+
     }
 }

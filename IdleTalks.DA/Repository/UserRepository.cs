@@ -21,13 +21,21 @@ namespace IdleTalks.DA.Repository
         {
             using (var db = DbContextFactory.Create())
             {
-                var newUser = db.Users.Create();
-                newUser.FirstName = user.FirstName;
-                newUser.LastName = user.LastName;
-                newUser.Password = user.Password;
+                var newUser = MappingEngine.Map<User>(user);
                 db.Users.Add(newUser);
                 db.SaveChanges();
-                return user.Id;
+                return newUser.Id;
+            }
+        }
+
+        public void ChangePassword(long userId, string newPassword)
+        {
+            using (var db = DbContextFactory.Create())
+            {
+                var user = db.Users.Attach(new User { Id = userId });
+                user.Password = newPassword;
+                db.Configuration.ValidateOnSaveEnabled = false;
+                db.SaveChanges();
             }
         }
 

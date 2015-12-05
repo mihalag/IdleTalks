@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<views MappingHash="aa4052888e699b5b1ddb1feed836dd9796bde3851d556cfc46c1e76816dc05e0">
+<views MappingHash="433751ab41f4d1d475e88fd0cedf27f234c8b28b4c72bc54f44eeee652ba21f2">
   <view extent="CodeFirstDatabase.ConversationReply"><![CDATA[
     SELECT VALUE -- Constructing ConversationReply
         [CodeFirstDatabaseSchema.ConversationReply](T1.ConversationReply_Id, T1.ConversationReply_ConversationId, T1.ConversationReply_UserId, T1.ConversationReply_Message)
