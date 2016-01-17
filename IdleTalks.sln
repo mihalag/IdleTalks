@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "IdleTalksDb", "IdleTalksDb\IdleTalksDb.sqlproj", "{544643CF-7B74-417E-9E23-7BD30B0B0BDE}"
 EndProject
@@ -11,11 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.Repository", "Idl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.DA.Tests", "IdleTalks.DA.Tests\IdleTalks.DA.Tests.csproj", "{4DE6D129-D900-4FFB-A036-6EB0CB1CDCC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.EfTools", "IdleTalks.Utilities.Ef\IdleTalks.Utilities.Ef.csproj", "{42784680-159C-4AAE-A23B-8FB61D77C62C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.Utilities.Ef", "IdleTalks.Utilities.Ef\IdleTalks.Utilities.Ef.csproj", "{42784680-159C-4AAE-A23B-8FB61D77C62C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.AutofacConfig", "IdleTalks.AutofacConfig\IdleTalks.AutofacConfig.csproj", "{12E9B384-F14F-411F-8902-6C734DDA38DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.AutoMapperUtils", "IdleTalks.Utilities.AutoMapper\IdleTalks.Utilities.AutoMapper.csproj", "{56CBEE3D-3D05-4311-B0CF-7F6C32E072B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.Utilities.AutoMapper", "IdleTalks.Utilities.AutoMapper\IdleTalks.Utilities.AutoMapper.csproj", "{56CBEE3D-3D05-4311-B0CF-7F6C32E072B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.Web", "IdleTalks.Web\IdleTalks.Web.csproj", "{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{56CBEE3D-3D05-4311-B0CF-7F6C32E072B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56CBEE3D-3D05-4311-B0CF-7F6C32E072B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56CBEE3D-3D05-4311-B0CF-7F6C32E072B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
