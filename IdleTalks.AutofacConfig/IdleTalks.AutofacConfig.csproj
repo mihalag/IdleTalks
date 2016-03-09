@@ -67,7 +67,7 @@
   <ItemGroup>
     <ProjectReference Include="..\IdleTalks.Utilities.AutoMapper\IdleTalks.Utilities.AutoMapper.csproj">
       <Project>{56cbee3d-3d05-4311-b0cf-7f6c32e072b8}</Project>
-      <Name>IdleTalks.AutoMapperUtils</Name>
+      <Name>IdleTalks.Utilities.AutoMapper</Name>
     </ProjectReference>
     <ProjectReference Include="..\IdleTalks.DA\IdleTalks.DA.csproj">
       <Project>{318a1d65-1c20-40ae-a3fe-4eb7929500ac}</Project>
@@ -75,7 +75,7 @@
     </ProjectReference>
     <ProjectReference Include="..\IdleTalks.Utilities.Ef\IdleTalks.Utilities.Ef.csproj">
       <Project>{42784680-159c-4aae-a23b-8fb61d77c62c}</Project>
-      <Name>IdleTalks.EfTools</Name>
+      <Name>IdleTalks.Utilities.Ef</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

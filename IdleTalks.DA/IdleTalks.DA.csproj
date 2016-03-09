@@ -136,7 +136,7 @@
   <ItemGroup>
     <ProjectReference Include="..\IdleTalks.Utilities.Ef\IdleTalks.Utilities.Ef.csproj">
       <Project>{42784680-159c-4aae-a23b-8fb61d77c62c}</Project>
-      <Name>IdleTalks.EfTools</Name>
+      <Name>IdleTalks.Utilities.Ef</Name>
     </ProjectReference>
     <ProjectReference Include="..\IdleTalks.Repository\IdleTalks.Repository.csproj">
       <Project>{7dcceb81-bfcf-4155-9333-aec50c9c356a}</Project>
