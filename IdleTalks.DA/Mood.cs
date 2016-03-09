@@ -28,23 +28,13 @@ using DatabaseGeneratedOption = System.ComponentModel.DataAnnotations.Schema.Dat
 namespace IdleTalks.DA
 {
     // Mood
-    [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "2.17.0.0")]
     public class Mood
     {
         public long Id { get; set; } // Id (Primary key via unique index PK_Mood_Id)
-        public long UserId { get; set; } // UserId
         public string Text { get; set; } // Text
-
-        // Reverse navigation
-        public virtual ICollection<User> Users { get; set; } // User.FK_User_Mood
 
         // Foreign keys
         public virtual User User { get; set; } // FK_Mood_User
-        
-        public Mood()
-        {
-            Users = new List<User>();
-        }
     }
 
 }

@@ -46,9 +46,6 @@ namespace IdleTalks.DA
             Property(x => x.BirthDay).HasColumnName("BirthDay").IsOptional().HasColumnType("datetime2");
             Property(x => x.Password).HasColumnName("Password").IsRequired().HasColumnType("nvarchar").HasMaxLength(20);
             Property(x => x.MoodId).HasColumnName("MoodId").IsOptional().HasColumnType("bigint");
-
-            // Foreign keys
-            HasOptional(a => a.Mood).WithMany(b => b.Users).HasForeignKey(c => c.MoodId); // FK_User_Mood
         }
     }
 

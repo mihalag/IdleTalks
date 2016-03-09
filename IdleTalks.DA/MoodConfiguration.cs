@@ -41,11 +41,10 @@ namespace IdleTalks.DA
             HasKey(x => x.Id);
 
             Property(x => x.Id).HasColumnName("Id").IsRequired().HasColumnType("bigint").HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
-            Property(x => x.UserId).HasColumnName("UserId").IsRequired().HasColumnType("bigint");
             Property(x => x.Text).HasColumnName("Text").IsRequired().IsFixedLength().HasColumnType("nchar").HasMaxLength(1024);
 
             // Foreign keys
-            HasRequired(a => a.User).WithMany(b => b.Moods).HasForeignKey(c => c.UserId); // FK_Mood_User
+            HasRequired(a => a.User).WithOptional(b => b.Mood); // FK_Mood_User
         }
     }
 

@@ -41,17 +41,13 @@ namespace IdleTalks.DA
         // Reverse navigation
         public virtual ICollection<Conversation> Conversations_UserOneId { get; set; } // Conversation.FK_Conversation_UserOne
         public virtual ICollection<Conversation> Conversations_UserTwoId { get; set; } // Conversation.FK_Conversation_UserTwo
-        public virtual ICollection<Mood> Moods { get; set; } // Mood.FK_Mood_User
         public virtual ICollection<Note> Notes { get; set; } // Note.FK_Note_User
-
-        // Foreign keys
-        public virtual Mood Mood { get; set; } // FK_User_Mood
+        public virtual Mood Mood { get; set; } // Mood.FK_Mood_User
         
         public User()
         {
             Conversations_UserOneId = new List<Conversation>();
             Conversations_UserTwoId = new List<Conversation>();
-            Moods = new List<Mood>();
             Notes = new List<Note>();
         }
     }

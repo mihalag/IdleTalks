@@ -31,20 +31,8 @@ namespace IdleTalks.DA
     [GeneratedCodeAttribute("EF.Reverse.POCO.Generator", "2.17.0.0")]
     public class Conversation
     {
-
-        ///<summary>
-        /// Идентификатор беседы
-        ///</summary>
         public Guid Id { get; set; } // Id (Primary key via unique index PK_Conversation_Id)
-
-        ///<summary>
-        /// Идентификатор первого участника беседы
-        ///</summary>
         public long UserOneId { get; set; } // UserOneId
-
-        ///<summary>
-        /// Идентификатор второго участника беседы
-        ///</summary>
         public long UserTwoId { get; set; } // UserTwoId
 
         // Reverse navigation

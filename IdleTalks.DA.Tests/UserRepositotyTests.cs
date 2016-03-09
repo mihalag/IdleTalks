@@ -50,7 +50,7 @@ namespace IdleTalks.DA.Tests
             Assert.That(newPassword, Is.EqualTo(newPass));
         }
 
-        [Test, Rollback]
+        [Test]
         public void CheckPassword_ByDefault_Works()
         {
             var container = GetContainer();
