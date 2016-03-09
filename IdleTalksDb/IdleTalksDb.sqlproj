@@ -67,4 +67,7 @@
     <Build Include="dbo\Tables\ConversationReply.sql" />
     <Build Include="dbo\Tables\Conversation.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="IdleTalks.publish.publish.xml" />
+  </ItemGroup>
 </Project>

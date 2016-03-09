@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<views MappingHash="433751ab41f4d1d475e88fd0cedf27f234c8b28b4c72bc54f44eeee652ba21f2">
+<views MappingHash="f86c9d684e06f27fd7b3ce3a291131f7a1208a544d5df1c72eac8e6ca1446471">
   <view extent="CodeFirstDatabase.ConversationReply"><![CDATA[
     SELECT VALUE -- Constructing ConversationReply
         [CodeFirstDatabaseSchema.ConversationReply](T1.ConversationReply_Id, T1.ConversationReply_ConversationId, T1.ConversationReply_UserId, T1.ConversationReply_Message)
@@ -39,11 +39,10 @@
     ) AS T1]]></view>
   <view extent="CodeFirstDatabase.Mood"><![CDATA[
     SELECT VALUE -- Constructing Mood
-        [CodeFirstDatabaseSchema.Mood](T1.Mood_Id, T1.Mood_UserId, T1.Mood_Text)
+        [CodeFirstDatabaseSchema.Mood](T1.Mood_Id, T1.Mood_Text)
     FROM (
         SELECT 
             T.Id AS Mood_Id, 
-            T.UserId AS Mood_UserId, 
             T.Text AS Mood_Text, 
             True AS _from0
         FROM IdleTalksDbContext.Moods AS T
@@ -99,11 +98,10 @@
     ) AS T1]]></view>
   <view extent="IdleTalksDbContext.Moods"><![CDATA[
     SELECT VALUE -- Constructing Moods
-        [IdleTalks.DA.Mood](T1.Mood_Id, T1.Mood_UserId, T1.Mood_Text)
+        [IdleTalks.DA.Mood](T1.Mood_Id, T1.Mood_Text)
     FROM (
         SELECT 
             T.Id AS Mood_Id, 
-            T.UserId AS Mood_UserId, 
             T.Text AS Mood_Text, 
             True AS _from0
         FROM CodeFirstDatabase.Mood AS T
