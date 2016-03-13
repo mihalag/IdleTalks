@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.Utilities.AutoMap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.Web", "IdleTalks.Web\IdleTalks.Web.csproj", "{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.WebApi", "IdleTalks.WebApi\IdleTalks.WebApi.csproj", "{2224B582-250B-4B99-AF7C-4B2B03A7845A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleTalks.WebApiNoAuth", "IdleTalks.WebApiNoAuth\IdleTalks.WebApiNoAuth.csproj", "{C1E6C192-B27D-4B8E-BFEF-476E8DC37E7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,14 @@ Global
 		{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0A55FAC-1D62-4EA1-AA9A-06C23869E26B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2224B582-250B-4B99-AF7C-4B2B03A7845A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2224B582-250B-4B99-AF7C-4B2B03A7845A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2224B582-250B-4B99-AF7C-4B2B03A7845A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2224B582-250B-4B99-AF7C-4B2B03A7845A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E6C192-B27D-4B8E-BFEF-476E8DC37E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E6C192-B27D-4B8E-BFEF-476E8DC37E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E6C192-B27D-4B8E-BFEF-476E8DC37E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E6C192-B27D-4B8E-BFEF-476E8DC37E7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
